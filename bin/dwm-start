@@ -16,5 +16,7 @@ gnome-keyring-daemon --start --components=pkcs11, secrets, gpg, ssh &
 volumeicon &
 wmname LG3D
 
-
-/home/bernd/.dwm/dwm 2>> .dwm.log
+while true; do
+    # Log stderror to a file 
+    /home/bernd/.dwm/dwm 2>> .dwm.log
+done
