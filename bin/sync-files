@@ -1,0 +1,2 @@
+#!/bin/bash
+rsync -r -t -v --progress --modify-window=1 -s ~/Documents ~/share/data
