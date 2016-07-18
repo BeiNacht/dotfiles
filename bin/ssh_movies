@@ -1,0 +1,1 @@
+sshfs bernd@server:/mnt/movies/ ~/share/ssh_movies

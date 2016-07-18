@@ -1,0 +1,1 @@
+sshfs bernd@server:/mnt/data/ ~/share/ssh_data
