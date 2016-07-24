@@ -9,10 +9,8 @@ conky.config = {
 }
 
 conky.text = [[
-    ${exec echo -e '\uf062'} ${upspeedf wlp4s0}    ${exec echo -e '\uf063'} ${downspeedf wlp4s0}    ${exec echo -e '\uf1eb'} ${wireless_link_qual_perc wlp4s0}%\
+    ${exec echo -e '\uf062'} ${upspeedf enp3s0}    ${exec echo -e '\uf063'} ${downspeedf enp3s0}\
     ${exec echo -e '\uf028'} ${exec amixer get Master | grep Left: | cut -d " " -f7 | tr -d '[]'}\
-    ${exec echo -e '\uf240'} ${battery_percent}%\
-    ${exec echo -e '\uf1b8'} ${ibm_fan}RPM\
     ${exec echo -e '\uf299'} ${acpitemp}°C\
     ${exec echo -e '\uf085'} ${cpu}% / ${freq_g} GHz\
     ${exec echo -e '\uf1b3'} ${mem}/${memmax}\

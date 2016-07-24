@@ -8,13 +8,13 @@ export LC_MESSAGES="en_US.UTF-8"
 xrdb -merge .Xresources &
 nitrogen --restore &
 compton &
-light-locker &
-unclutter &
-nm-applet &
+#light-locker &
+#unclutter &
+#nm-applet &
 (conky | while read LINE; do xsetroot -name "$LINE"; done) &
-gnome-keyring-daemon --start --components=pkcs11, secrets, gpg, ssh &
-/usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
-volumeicon &
+#gnome-keyring-daemon --start --components=pkcs11, secrets, gpg, ssh &
+#/usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
+#volumeicon &
 wmname LG3D
 
 while true; do
