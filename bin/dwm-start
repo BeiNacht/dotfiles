@@ -13,10 +13,10 @@ compton &
 #nm-applet &
 (conky | while read LINE; do xsetroot -name "$LINE"; done) &
 gnome-keyring-daemon --start --components=pkcs11, secrets, gpg, ssh &
-/usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 #volumeicon &
 wmname LG3D
 
-while true; do
-    /home/bernd/.dwm/dwm 2>> .dwm.log
-done
+#while true; do
+/home/bernd/.dwm/dwm 2>> .dwm.log
+#done
