@@ -11,7 +11,8 @@ compton &
 light-locker &
 unclutter &
 nm-applet &
-(conky | while read LINE; do xsetroot -name "$LINE"; done) &
+while true; do xsetroot -name "$( date +"%R" )"; sleep 1m; done &
+mate-power-manager &
 gnome-keyring-daemon --start --components=pkcs11, secrets, gpg, ssh &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 volumeicon &
