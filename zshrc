@@ -1,7 +1,7 @@
 export ZSH=/home/bernd/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 plugins=(archlinux common-aliases docker npm systemd git)
-export PATH="/home/bernd/.bin:$PATH"
+export PATH="/home/bernd/.bin:/home/bernd/.gem/ruby/2.3.0/bin:$PATH"
 export DEFAULT_USER="bernd"
 source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
@@ -15,4 +15,5 @@ alias active-services="systemctl --no-page --no-legend --plain -t service --stat
 alias s="subl3"
 alias -g C="| wc -l"
 alias -g G="| grep --ignore-case"
-alias installed-packages="comm -23 <(pacman -Qqen|sort) <(pacman -Qqg base base-devel|sort)"
+alias installed-packages="comm -23 <(yaourt -Qqe|sort) <(pacman -Qqg base base-devel|sort)"
+alias l="ls++ --potsf"

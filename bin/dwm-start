@@ -8,12 +8,13 @@ export LC_MESSAGES="en_US.UTF-8"
 xrdb -merge .Xresources &
 nitrogen --restore &
 compton &
-light-locker &
+#light-locker &
 unclutter &
+cbatticon &
 nm-applet &
 while true; do xsetroot -name "$( date +"%R" )"; sleep 1m; done &
-mate-power-manager &
-gnome-keyring-daemon --start --components=pkcs11, secrets, gpg, ssh &
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
+export SSH_AUTH_SOCK
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 volumeicon &
 wmname LG3D
