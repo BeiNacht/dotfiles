@@ -1,1 +1,0 @@
-sudo mount -t cifs //server/data ~/share/data -o user=bernd,iocharset=utf8,uid=bernd,gid=users
