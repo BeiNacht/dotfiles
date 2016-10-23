@@ -20,5 +20,5 @@ volumeicon &
 wmname LG3D
 
 #while true; do
-/home/bernd/.dwm/dwm 2>> .dwm.log
+/home/bernd/.dwm/dwm 2> .dwm.log
 #done
