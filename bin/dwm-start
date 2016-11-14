@@ -6,9 +6,7 @@ export LC_COLLATE="en_US.UTF-8"
 export LC_MESSAGES="en_US.UTF-8"
 
 xrdb -merge .Xresources &
-nitrogen --restore &
-compton &
-#light-locker &
+#nitrogen --restore &
 unclutter &
 cbatticon &
 nm-applet &
@@ -19,6 +17,7 @@ export SSH_AUTH_SOCK
 volumeicon &
 wmname LG3D
 
-#while true; do
-/home/bernd/.dwm/dwm 2> .dwm.log
-#done
+while true; do
+#	/home/bernd/.dwm/dwm 2> .dwm.log
+	/home/bernd/.dwm/dwm >> .dwm.log 2>&1
+done

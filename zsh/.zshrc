@@ -18,3 +18,12 @@ alias -g G="| grep --ignore-case"
 alias installed-packages="comm -23 <(yaourt -Qqe|sort) <(pacman -Qqg base base-devel|sort)"
 alias l="ls++ --potsf"
 alias la="ls++ --potsf -a"
+alias ll="ls++ --potsf"
+
+###-tns-completion-start-###
+if [ -f /home/bernd/.tnsrc ]; then
+    source /home/bernd/.tnsrc
+fi
+###-tns-completion-end-###
+
+source /usr/share/nvm/init-nvm.sh
