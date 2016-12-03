@@ -1,13 +1,14 @@
-export ZSH=/home/bernd/.oh-my-zsh
-ZSH_THEME="robbyrussell"
+ZSH_THEME="spaceship"
 plugins=(archlinux common-aliases docker npm systemd git)
+export SPACESHIP_PROMPT_ADD_NEWLINE=false
+export ZSH=/home/bernd/.oh-my-zsh
 export PATH="/home/bernd/.bin:/home/bernd/.gem/ruby/2.3.0/bin:$PATH"
 export DEFAULT_USER="bernd"
-source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 export EDITOR='nano'
 export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="~/.ssh/dsa_id"
+source $ZSH/oh-my-zsh.sh
 
 alias db="sudo updatedb"
 alias pac-big-size="expac --humansize=M '%m %n' | sort -n"

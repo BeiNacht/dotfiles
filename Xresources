@@ -42,12 +42,10 @@ urxvt*depth: 32
 urxvt*background: rgba:0000/0000/0000/dddd
 URxvt*scrollBar: false
 urxvt*font: xft:Terminus:size=10:antialias=true
-urxvt*perl-ext-common: default,matcher,clipboard
-urxvt*url-launcher: firefox
+urxvt*perl-ext-common: default,matcher,cursortail
+urxvt*url-launcher: /usr/bin/xdg-open
 urxvt*matcher.button: 1
 urxvt*iso14755: False
-urxvt*keysym.Shift-Control-C: perl:clipboard:copy
-urxvt*keysym.Shift-Control-V: perl:clipboard:paste
 urxvt*cursorBlink: 1
 urxvt*cursorUnderline: 1
 Xcursor.size: 16

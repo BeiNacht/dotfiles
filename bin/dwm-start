@@ -6,7 +6,7 @@ export LC_COLLATE="en_US.UTF-8"
 export LC_MESSAGES="en_US.UTF-8"
 
 xrdb -merge .Xresources &
-#nitrogen --restore &
+nitrogen --restore &
 unclutter &
 cbatticon &
 nm-applet &
@@ -18,6 +18,6 @@ volumeicon &
 wmname LG3D
 
 while true; do
-#	/home/bernd/.dwm/dwm 2> .dwm.log
-	/home/bernd/.dwm/dwm >> .dwm.log 2>&1
+	/home/bernd/.dwm/dwm 2> .dwm.log
+#	/home/bernd/.dwm/dwm >> .dwm.log 2>&1
 done
