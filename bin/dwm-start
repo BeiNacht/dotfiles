@@ -8,6 +8,7 @@ export LC_MESSAGES="en_US.UTF-8"
 xrdb -merge .Xresources &
 nitrogen --restore &
 unclutter &
+compton &
 cbatticon &
 nm-applet &
 while true; do xsetroot -name "$( date +"%R" )"; sleep 1m; done &
