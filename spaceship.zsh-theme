@@ -200,17 +200,23 @@ spaceship_return_status() {
   echo    "%{$reset_color%}"
 }
 
+clock() {
+  echo -n " %Bat%b "
+  echo -n "%{$fg_bold[yellow]%}%D{%L:%M} %{$fg_bold[cyan]%}%D{%p}"
+  echo    "%{$reset_color%}"
+}
+
 # Build prompt line
 spaceship_build_prompt() {
   spaceship_host
   spaceship_current_dir
   spaceship_git_status
   spaceship_nvm_status
+  clock
 }
 
 # Compose PROMPT
 PROMPT='$(spaceship_build_prompt) $NEWLINE$(spaceship_return_status) '
-RPROMPT='%{$fg_bold[yellow]%}%D{%L:%M} %{$fg_bold[cyan]%}%D{%p}%{$reset_color%}'
 
 # Set PROMPT_SYMBOL2 - continuation interactive prompt
 PS2="%{$fg_bold[yellow]%}"

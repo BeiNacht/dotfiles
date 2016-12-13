@@ -41,7 +41,7 @@ URxvt*color15:              #a6a6a6
 urxvt*depth: 32
 urxvt*background: rgba:0000/0000/0000/dddd
 URxvt*scrollBar: false
-urxvt*font: xft:Terminus:size=10:antialias=true
+urxvt*font: xft:gohufont:size=11:antialias=false
 urxvt*perl-ext-common: default,matcher,cursortail
 urxvt*url-launcher: /usr/bin/xdg-open
 urxvt*matcher.button: 1

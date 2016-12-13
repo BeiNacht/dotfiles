@@ -32,3 +32,11 @@ if [ ! -e "$HOME/.oh-my-zsh/themes/spaceship.zsh-theme" ]; then
     echo "link spaceship.zsh-theme"
     ln -s $DIR/spaceship.zsh-theme $HOME/.oh-my-zsh/themes/.spaceship.zsh-theme
 fi
+if [ ! -e "$HOME/.bin" ]; then
+    echo "link bin"
+    ln -s $DIR/bin $HOME/.bin
+fi
+if [ ! -e "$HOME/.xbindkeysrc" ]; then
+    echo "link xbindkeysrc"
+    ln -s $DIR/xbindkeysrc $HOME/.xbindkeysrc
+fi
