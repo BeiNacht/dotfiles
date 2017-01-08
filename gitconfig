@@ -1,0 +1,7 @@
+[user]
+	email = alexander@szczepan.ski
+	name = Alexander Szczepanski
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	required = true
+	clean = git-lfs clean -- %f

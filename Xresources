@@ -1,80 +1,51 @@
 !! -------- BASE -------- #
-!  URxvt.foreground:   #a6a6a6
-!  URxvt*cursorColor:  #a6a6a6
-!  URxvt*colorUL:      #6E484e
+  URxvt.foreground:   #a6a6a6
+  URxvt*cursorColor:  #a6a6a6
+  URxvt*colorUL:      #6E484e
 !! ---------------------- #
 !
 !!Black
-!URxvt*color0:               #111111
-!URxvt*color8:               #474747
+URxvt*color0:               #111111
+URxvt*color8:               #474747
 !
 !!Red
-!URxvt*color1:               #61292C
-!URxvt*color9:               #63484e
+URxvt*color1:               #61292C
+URxvt*color9:               #63484e
 !
 !!Green
-!URxvt*color2:               #305D3D
-!URxvt*color10:              #486350
+URxvt*color2:               #305D3D
+URxvt*color10:              #486350
 !
 !!Yellow
-!URxvt*color3:               #A59853
-!URxvt*color11:              #6f6b56
+URxvt*color3:               #A59853
+URxvt*color11:              #6f6b56
 !
 !!Blue
-!URxvt*color4:               #316177
-!URxvt*color12:              #56676F
+URxvt*color4:               #316177
+URxvt*color12:              #56676F
 !
 !!Magenta
-!URxvt*color5:               #63485B
-!URxvt*color13:              #63485B
+URxvt*color5:               #63485B
+URxvt*color13:              #63485B
 !
 !!Cyan
-!URxvt*color6:               #808080
-!URxvt*color14:              #636363
+URxvt*color6:               #808080
+URxvt*color14:              #636363
 !
 !!White
-!URxvt*color7:               #C5C5C5
-!URxvt*color15:              #a6a6a6
+URxvt*color7:               #C5C5C5
+URxvt*color15:              #a6a6a6
 
-*foreground: #D7D0C7
-
-!black
-*color0:     #101010
-*color8:     #404040
-!red
-*color1:     #E84F4F
-*color9:     #D23D3D
-!green
-*color2:     #B8D68C
-*color10:    #A0CF5D
-!yellow
-*color3:     #E1AA5D
-*color11:    #F39D21
-!blue
-*color4:     #7DC1CF
-*color12:    #4E9FB1
-!magenta
-*color5:     #9B64FB
-*color13:    #8542FF
-!cyan
-*color6:     #6D878D
-*color14:    #42717B
-!white
-*color7:     #dddddd
-*color15:    #dddddd
-
-URxvt*cursorColor:        #ff8939
+!URxvt*cursorColor:        #ff8939
 
 urxvt*depth: 32
-urxvt*background: rgba:0000/0000/0000/bbbb
+urxvt*background: rgba:0000/0000/0000/dddd
 URxvt*scrollBar: false
-urxvt*font: xft:Terminus:size=10:antialias=true
-urxvt*perl-ext-common: default,matcher,clipboard
-urxvt*url-launcher: firefox
+urxvt*font: xft:gohufont:size=11:antialias=false
+urxvt*perl-ext-common: default,matcher,cursortail
+urxvt*url-launcher: /usr/bin/xdg-open
 urxvt*matcher.button: 1
 urxvt*iso14755: False
-urxvt*keysym.Shift-Control-C: perl:clipboard:copy
-urxvt*keysym.Shift-Control-V: perl:clipboard:paste
 urxvt*cursorBlink: 1
 urxvt*cursorUnderline: 1
 Xcursor.size: 16
@@ -83,11 +54,11 @@ Xcursor.size: 16
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-rofi.color-window: argb:aa000000, argb:aa000000, argb:00000000
-rofi.color-normal: argb:00000000, #a6a6a6, argb:00000000, #a6a6a6, #000000
-rofi.color-active: argb:00000000, #268bd2, #a6a6a6, #268bd2, #a6a6a6
-rofi.color-urgent: argb:00000000, #dc322f, #a6a6a6, #dc322f, #a6a6a6
+rofi.color-window: #000000, #000000, #a6a6a6
+rofi.color-normal: #000000, #a6a6a6, #000000, #a6a6a6, #000000
+rofi.color-active: #000000, #268bd2, #a6a6a6, #268bd2, #a6a6a6
+rofi.color-urgent: #000000, #dc322f, #a6a6a6, #dc322f, #a6a6a6
 rofi.separator-style: solid
-rofi.fullscreen: true
-rofi.padding: 400
+!rofi.fullscreen: true
+!rofi.padding: 400
 rofi.font: Terminus 10
