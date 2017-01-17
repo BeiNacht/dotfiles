@@ -40,3 +40,8 @@ if [ ! -e "$HOME/.xbindkeysrc" ]; then
     echo "link xbindkeysrc"
     ln -s $DIR/xbindkeysrc $HOME/.xbindkeysrc
 fi
+if [ ! -e "$HOME/.themes" ]; then
+    echo "link themes"
+    ln -s $DIR/themes $HOME/.themes
+fi
+
