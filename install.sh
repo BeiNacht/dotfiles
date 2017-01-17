@@ -45,3 +45,4 @@ if [ ! -e "$HOME/.themes" ]; then
     ln -s $DIR/themes $HOME/.themes
 fi
 
+cat $DIR/mate-terminal-dump.dconf | dconf load /org/mate/terminal/
