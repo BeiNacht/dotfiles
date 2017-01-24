@@ -27,4 +27,6 @@ if [ -f /home/bernd/.tnsrc ]; then
 fi
 ###-tns-completion-end-###
 
-source /usr/share/nvm/init-nvm.sh
+if [ -f /usr/share/nvm/init-nvm.sh ]; then 
+    source /usr/share/nvm/init-nvm.sh
+fi
