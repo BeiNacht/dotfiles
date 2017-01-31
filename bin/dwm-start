@@ -9,8 +9,6 @@ xrdb -merge .Xresources &
 nitrogen --restore &
 unclutter &
 compton &
-cbatticon &
-nm-applet &
 pa-applet &
 while true; do xsetroot -name "$( date +"%R" )"; sleep 1m; done &
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
@@ -19,7 +17,7 @@ export SSH_AUTH_SOCK
 wmname LG3D
 
 while true; do
-#	i3
-	/home/bernd/.dwm/dwm 2> .dwm.log
+	i3
+#	/home/bernd/.dwm/dwm 2> .dwm.log
 #	/home/bernd/.dwm/dwm >> .dwm.log 2>&1
 done
