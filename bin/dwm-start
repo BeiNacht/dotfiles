@@ -17,7 +17,7 @@ export SSH_AUTH_SOCK
 wmname LG3D
 
 while true; do
-#	i3
-	/home/bernd/.dwm/dwm 2> .dwm.log
+	i3
+#	/home/bernd/.dwm/dwm 2> .dwm.log
 #	/home/bernd/.dwm/dwm >> .dwm.log 2>&1
 done
