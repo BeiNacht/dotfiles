@@ -1,1 +1,2 @@
-sudo echo level auto | sudo tee /proc/acpi/ibm/fan
+echo 1 | sudo tee /sys/class/drm/card0/device/hwmon/hwmon0/pwm1_enable
+echo 102 | sudo tee /sys/class/drm/card0/device/hwmon/hwmon0/pwm1 
