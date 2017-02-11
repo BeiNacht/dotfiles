@@ -1,7 +1,11 @@
 [user]
-	email = alexander@szczepan.ski
+	email = alexander.szczepanski.ext@confinpro.de
 	name = Alexander Szczepanski
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	required = true
 	clean = git-lfs clean -- %f
+[core]
+	autocrlf = false
+[branch]
+	autosetuprebase = always
