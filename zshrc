@@ -30,3 +30,5 @@ fi
 if [ -f /usr/share/nvm/init-nvm.sh ]; then 
     source /usr/share/nvm/init-nvm.sh
 fi
+alias sm="cd src/shared && git checkout master && git pull && cd ../.."
+alias gk="LD_PRELOAD=/usr/lib/libcurl.so.3 gitkraken"

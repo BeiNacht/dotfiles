@@ -1,6 +1,6 @@
 slot-allocation = dynamic
 bubble-expire-timeout = 5sec
-bubble-vertical-gap = 20px
+bubble-vertical-gap = 5px
 bubble-horizontal-gap = 5px
 bubble-corner-radius = 0px
 bubble-icon-size = 30px
