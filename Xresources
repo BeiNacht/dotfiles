@@ -61,4 +61,4 @@ rofi.color-urgent: argb:00000000, #dc322f, #a6a6a6, #dc322f, #a6a6a6
 rofi.separator-style: solid
 rofi.fullscreen: true
 rofi.padding: 400
-rofi.font: Terminus 10
+rofi.font: SFNS Display Regular 13
