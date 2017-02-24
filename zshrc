@@ -18,6 +18,9 @@ alias -g C="| wc -l"
 alias -g G="| grep --ignore-case"
 alias installed-packages="comm -23 <(yaourt -Qqe|sort) <(pacman -Qqg base base-devel|sort)"
 alias bat="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
+alias activate-smb="sc-start smbd && sc-start nmbd"
+alias stop-smb="sc-stop smbd && sc-stop nmbd"
+
 
 ###-tns-completion-start-###
 if [ -f /home/bernd/.tnsrc ]; then
