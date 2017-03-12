@@ -4,7 +4,7 @@ hide_edge_borders smart
 set $mod Mod4
 font pango:Terminus 10
 floating_modifier $mod
-gaps inner 10
+gaps inner 5
 smart_gaps on
 
 bindsym $mod+r exec rofi -show run
