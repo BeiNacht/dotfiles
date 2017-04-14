@@ -31,3 +31,7 @@ fi
 if [ -f /usr/share/nvm/init-nvm.sh ]; then 
     source /usr/share/nvm/init-nvm.sh
 fi
+
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+
