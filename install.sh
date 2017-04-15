@@ -67,6 +67,6 @@ sudo ln -s $DIR/udev-rules/50-hdparm.rules /etc/udev/rules.d/50-hdparm.rules
 
 echo "link startup.desktop"
 sudo rm -f /usr/share/xsessions/startup.desktop
-sudo ln -s $DIR/startup.desktop /usr/share/xsessions/startup.desktop
+sudo cp $DIR/startup.desktop /usr/share/xsessions/startup.desktop
 
 #cat $DIR/mate-terminal-dump.dconf | dconf load /org/mate/terminal/
