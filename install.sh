@@ -37,14 +37,6 @@ echo "link bin"
 rm -f $HOME/.bin
 ln -s $DIR/bin $HOME/.bin
 
-echo "link xbindkeysrc"
-rm -f $HOME/.xbindkeysrc
-ln -s $DIR/xbindkeysrc $HOME/.xbindkeysrc
-
-echo "link themes"
-rm -f $HOME/.themes
-ln -s $DIR/themes $HOME/.themes
-
 echo "link i3"
 rm -f $HOME/.config/i3/config
 ln -s $DIR/config-i3 $HOME/.config/i3/config

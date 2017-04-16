@@ -12,19 +12,15 @@ bindsym $mod+Return exec mate-terminal
 bindsym $mod+Shift+c kill
 bindsym $mod+Shift+s restart
 bindsym $mod+Shift+a reload
-
 bindsym --whole-window $mod+button2 floating toggle
 bindsym $mod+f fullscreen toggle
 bindsym $mod+d layout toggle split
 bindsym $mod+space focus mode_toggle
-#bindsym $mod+s layout stacking
 bindsym $mod+z layout tabbed
 bindsym $mod+x exec "notify-send Time $(date '+%H:%M')"
 bindsym $mod+b exec "notify-send Battery $(upower -i $(upower -e | grep 'BAT') | grep -E 'percentage' | cut -d ' ' -f15)"
-
 bindsym $mod+h split h
 bindsym $mod+v split v
-
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -38,7 +34,8 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-for_window [ workspace="10" ] floating enable
+for_window [class="Mate-terminal"] floating enable
+for_window [class="Nemo"] floating enable
 
 # switch to workspace
 bindsym $mod+1 workspace 1
