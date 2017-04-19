@@ -41,6 +41,10 @@ echo "link i3"
 rm -f $HOME/.config/i3/config
 ln -s $DIR/config-i3 $HOME/.config/i3/config
 
+echo "link dunst"
+rm -f $HOME/.config/dunst/dunstrc
+ln -s $DIR/dunstrc $HOME/.config/dunst/dunstrc
+
 echo "link 20-intel.conf"
 sudo rm -f /etc/X11/xorg.conf.d/20-intel.conf
 sudo ln -s $DIR/xorg.conf.d/20-intel.conf /etc/X11/xorg.conf.d/20-intel.conf
@@ -57,7 +61,7 @@ echo "link 50-hdparm.rules"
 sudo rm -f /etc/udev/rules.d/50-hdparm.rules
 sudo ln -s $DIR/udev-rules/50-hdparm.rules /etc/udev/rules.d/50-hdparm.rules
 
-echo "link startup.desktop"
+echo "cp startup.desktop"
 sudo rm -f /usr/share/xsessions/startup.desktop
 sudo cp $DIR/startup.desktop /usr/share/xsessions/startup.desktop
 
