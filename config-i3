@@ -2,27 +2,25 @@ new_window 1pixel
 new_float 1pixel
 hide_edge_borders smart
 set $mod Mod4
-font pango:Terminus 10
+font pango:xos4 Terminus Regular 10
 floating_modifier $mod
 gaps inner 5
 smart_gaps on
 
-bindsym $mod+r exec rofi -show run
+bindsym $mod+Shift+Return exec rofi -show run
 bindsym $mod+Return exec mate-terminal
 bindsym $mod+Shift+c kill
-bindsym $mod+Shift+r restart
-bindsym $mod+Shift+q reload
-
+bindsym $mod+Shift+s restart
+bindsym $mod+Shift+a reload
 bindsym --whole-window $mod+button2 floating toggle
 bindsym $mod+f fullscreen toggle
-bindsym $mod+e layout toggle split
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+d layout toggle split
 bindsym $mod+space focus mode_toggle
-
+bindsym $mod+z layout tabbed
+bindsym $mod+x exec "notify-send Time $(date '+%H:%M')"
+bindsym $mod+b exec "notify-send Battery $(upower -i $(upower -e | grep 'BAT') | grep -E 'percentage' | cut -d ' ' -f15)"
 bindsym $mod+h split h
 bindsym $mod+v split v
-
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -30,19 +28,15 @@ bindsym $mod+Right focus right
 bindsym $mod+k workspace next
 bindsym $mod+j workspace prev
 bindsym $mod+Tab exec rofi -show
-
+bindsym $mod+m bar mode toggle
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-for_window [ workspace="10" ] floating enable
-
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
+for_window [class="Mate-terminal"] floating enable
+for_window [class="Nemo"] floating enable
+for_window [class="Google-chrome" title="^Developer Tools - *"] floating enable
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -56,6 +50,17 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
+bindsym $mod+q workspace 1
+bindsym $mod+w workspace 2
+bindsym $mod+e workspace 3
+bindsym $mod+r workspace 4
+bindsym $mod+t workspace 5
+bindsym $mod+y workspace 6
+bindsym $mod+u workspace 7
+bindsym $mod+i workspace 8
+bindsym $mod+o workspace 9
+bindsym $mod+p workspace 10
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1; workspace 1
 bindsym $mod+Shift+2 move container to workspace 2; workspace 2
@@ -68,10 +73,37 @@ bindsym $mod+Shift+8 move container to workspace 8; workspace 8
 bindsym $mod+Shift+9 move container to workspace 9; workspace 9
 bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 
-bindsym $mod+Shift+m move workspace to output right
-bindsym $mod+Shift+n move workspace to output left
+# move focused container to workspace
+bindsym $mod+Shift+q move container to workspace 1; workspace 1
+bindsym $mod+Shift+w move container to workspace 2; workspace 2
+bindsym $mod+Shift+e move container to workspace 3; workspace 3
+bindsym $mod+Shift+r move container to workspace 4; workspace 4
+bindsym $mod+Shift+t move container to workspace 5; workspace 5
+bindsym $mod+Shift+y move container to workspace 6; workspace 6
+bindsym $mod+Shift+u move container to workspace 7; workspace 7
+bindsym $mod+Shift+i move container to workspace 8; workspace 8
+bindsym $mod+Shift+o move container to workspace 9; workspace 9
+bindsym $mod+Shift+p move container to workspace 10; workspace 10
 
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+client.focused          #A6A6A6 #A6A6A6 #1c1c1c #000000
+client.focused_inactive #4c4c4c #4c4c4c #ffffff #000000
+client.unfocused        #1c1c1c #1c1c1c #4c4c4c #000000
 
-exec --no-startup-id ~/.bin/startup
+bar {
+    position          top
+    mode              hide
+    modifier          none
+    workspace_buttons yes
+    tray_output       primary
+
+    font pango:xos4 Terminus Regular 10
+
+    colors {
+        background #000000
+        statusline #ffffff
+
+        focused_workspace  #1c1c1c #000000
+        active_workspace   #A6A6A6 #A6A6A6
+        inactive_workspace #4c4c4c #000000
+    }
+}

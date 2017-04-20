@@ -10,8 +10,7 @@ nitrogen --restore &
 unclutter &
 compton &
 pa-applet &
+nm-applet &
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
 export SSH_AUTH_SOCK
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-
-

@@ -21,14 +21,6 @@ echo "link nanorc"
 rm -f $HOME/.nanorc
 ln -s $DIR/nanorc $HOME/.nanorc
 
-echo "link synergy.conf"
-rm -f $HOME/.synergy.conf
-ln -s $DIR/synergy.conf $HOME/.synergy.conf
-
-echo "link notify-osd"
-rm -f $HOME/.notify-osd
-ln -s $DIR/notify-osd $HOME/.notify-osd
-
 echo "link spaceship.zsh-theme"
 rm -f $HOME/.oh-my-zsh/themes/spaceship.zsh-theme
 ln -s $DIR/spaceship.zsh-theme $HOME/.oh-my-zsh/themes/spaceship.zsh-theme
@@ -37,17 +29,13 @@ echo "link bin"
 rm -f $HOME/.bin
 ln -s $DIR/bin $HOME/.bin
 
-echo "link xbindkeysrc"
-rm -f $HOME/.xbindkeysrc
-ln -s $DIR/xbindkeysrc $HOME/.xbindkeysrc
-
-echo "link themes"
-rm -f $HOME/.themes
-ln -s $DIR/themes $HOME/.themes
-
 echo "link i3"
 rm -f $HOME/.config/i3/config
 ln -s $DIR/config-i3 $HOME/.config/i3/config
+
+echo "link dunst"
+rm -f $HOME/.config/dunst/dunstrc
+ln -s $DIR/dunstrc $HOME/.config/dunst/dunstrc
 
 echo "link 20-intel.conf"
 sudo rm -f /etc/X11/xorg.conf.d/20-intel.conf
