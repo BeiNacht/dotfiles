@@ -5,3 +5,5 @@
 	smudge = git-lfs smudge -- %f
 	required = true
 	clean = git-lfs clean -- %f
+[core]
+	excludesfile = /home/bernd/.gitignore_global

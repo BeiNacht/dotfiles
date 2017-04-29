@@ -37,20 +37,20 @@ echo "link bin"
 rm -f $HOME/.bin
 ln -s $DIR/bin $HOME/.bin
 
-echo "link xbindkeysrc"
-rm -f $HOME/.xbindkeysrc
-ln -s $DIR/xbindkeysrc $HOME/.xbindkeysrc
-
-echo "link themes"
-rm -f $HOME/.themes
-ln -s $DIR/themes $HOME/.themes
-
 echo "link i3"
 rm -f $HOME/.config/i3/config
 ln -s $DIR/config-i3 $HOME/.config/i3/config
 
 echo "link 20-radeon.conf"
 sudo rm -f /etc/X11/xorg.conf.d/20-radeon.conf
-sudo ln -s $DIR/xorg.conf.d/20-radeon.conf /etc/X11/xorg.conf.d/20-radeon.conf 
+sudo ln -s $DIR/xorg.conf.d/20-radeon.conf /etc/X11/xorg.conf.d/20-radeon.conf
+
+echo "link dunst"
+rm -f $HOME/.config/dunst/dunstrc
+ln -s $DIR/dunstrc $HOME/.config/dunst/dunstrc
+
+echo "cp startup.desktop"
+sudo rm -f /usr/share/xsessions/startup.desktop
+sudo cp $DIR/startup.desktop /usr/share/xsessions/startup.desktop
 
 #cat $DIR/mate-terminal-dump.dconf | dconf load /org/mate/terminal/

@@ -1,0 +1,6 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Desktop
+Exec=/home/bernd/.bin/startup
+Icon=i3
+Type=Application
