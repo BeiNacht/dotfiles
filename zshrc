@@ -1,5 +1,5 @@
 ZSH_THEME="spaceship"
-plugins=(archlinux common-aliases docker npm systemd git)
+plugins=(battery common-aliases cp docker systemd git)
 export SPACESHIP_PROMPT_ADD_NEWLINE=false
 export ZSH=/home/bernd/.oh-my-zsh
 export PATH="/home/bernd/.bin:/home/bernd/.gem/ruby/2.4.0/bin:$PATH"
@@ -25,8 +25,8 @@ alias installed-packages="comm -23 <(yaourt -Qqe|sort) <(pacman -Qqg base base-d
 if [ -f /home/bernd/.tnsrc ]; then
     source /home/bernd/.tnsrc
 fi
-###-tns-completion-end-###
 
-if [ -f /usr/share/nvm/init-nvm.sh ]; then 
+###-tns-completion-end-###
+if [ -f /usr/share/nvm/init-nvm.sh ]; then
     source /usr/share/nvm/init-nvm.sh
 fi
