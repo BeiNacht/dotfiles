@@ -61,6 +61,10 @@ echo "link 50-hdparm.rules"
 sudo rm -f /etc/udev/rules.d/50-hdparm.rules
 sudo ln -s $DIR/udev-rules/50-hdparm.rules /etc/udev/rules.d/50-hdparm.rules
 
+echo "link apm.service"
+sudo rm -f sudo rm -f /etc/systemd/system/apm.service
+sudo ln -s $DIR/systemd/apm.service /etc/systemd/system/apm.service
+
 echo "cp startup.desktop"
 sudo rm -f /usr/share/xsessions/startup.desktop
 sudo cp $DIR/startup.desktop /usr/share/xsessions/startup.desktop

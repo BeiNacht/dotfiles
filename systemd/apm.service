@@ -1,0 +1,10 @@
+[Unit]
+Description=Local system resume actions
+After=suspend.target hybrid-sleep.target hibernate.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/hdparm -B 127 -S 12 /dev/sdb
+
+[Install]
+WantedBy=sleep.target
