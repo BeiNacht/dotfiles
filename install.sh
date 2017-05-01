@@ -70,3 +70,7 @@ sudo rm -f /usr/share/xsessions/startup.desktop
 sudo cp $DIR/startup.desktop /usr/share/xsessions/startup.desktop
 
 #cat $DIR/mate-terminal-dump.dconf | dconf load /org/mate/terminal/
+echo "cp 99-wlan"
+sudo rm -f /etc/NetworkManager/dispatcher.d/99-wlan
+sudo cp $DIR/networkmanager/99-wlan /etc/NetworkManager/dispatcher.d/99-wlan
+
