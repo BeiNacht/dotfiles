@@ -25,10 +25,6 @@ echo "link synergy.conf"
 rm -f $HOME/.synergy.conf
 ln -s $DIR/synergy.conf $HOME/.synergy.conf
 
-echo "link notify-osd"
-rm -f $HOME/.notify-osd
-ln -s $DIR/notify-osd $HOME/.notify-osd
-
 echo "link spaceship.zsh-theme"
 rm -f $HOME/.oh-my-zsh/themes/spaceship.zsh-theme
 ln -s $DIR/spaceship.zsh-theme $HOME/.oh-my-zsh/themes/spaceship.zsh-theme
