@@ -41,9 +41,6 @@ echo "link 20-intel.conf"
 sudo rm -f /etc/X11/xorg.conf.d/20-intel.conf
 sudo ln -s $DIR/xorg.conf.d/20-intel.conf /etc/X11/xorg.conf.d/20-intel.conf
 
-echo "link audio_powersave.conf"
-sudo rm -f /etc/modprobe.d/audio_powersave.conf
-
 echo "link blacklist.conf"
 sudo rm -f /etc/modprobe.d/blacklist.conf
 sudo ln -s $DIR/modprobe/blacklist.conf /etc/modprobe.d/blacklist.conf

@@ -25,8 +25,10 @@ bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+bindsym $mod+l exec xscreensaver-command -lock
 bindsym $mod+k workspace next
 bindsym $mod+j workspace prev
+bindsym $mod+Shift+m move workspace to output right
 bindsym $mod+Tab exec rofi -show
 bindsym $mod+m bar mode toggle
 bindsym $mod+Shift+Left move left

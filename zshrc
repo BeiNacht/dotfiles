@@ -27,7 +27,6 @@ if [ -f /usr/share/nvm/init-nvm.sh ]; then
 fi
 
 alias sm="cd src/shared && git checkout master && git pull && cd ../.."
-alias gk="LD_PRELOAD=/usr/lib/libcurl.so.3 gitkraken"
 alias vv="gulp serve --env local"
 alias geno="gulp serve --env local --profile geno --instance bank1"
 alias gaa="git add --all && git reset src/index.ts"
