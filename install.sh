@@ -43,14 +43,16 @@ sudo ln -s $DIR/xorg.conf.d/20-intel.conf /etc/X11/xorg.conf.d/20-intel.conf
 
 echo "link audio_powersave.conf"
 sudo rm -f /etc/modprobe.d/audio_powersave.conf
-sudo ln -s $DIR/modprobe/audio_powersave.conf /etc/modprobe.d/audio_powersave.conf
 
 echo "link blacklist.conf"
 sudo rm -f /etc/modprobe.d/blacklist.conf
 sudo ln -s $DIR/modprobe/blacklist.conf /etc/modprobe.d/blacklist.conf
 
-echo "link 50-hdparm.rules"
-sudo rm -f /etc/udev/rules.d/50-hdparm.rules
-sudo ln -s $DIR/udev-rules/50-hdparm.rules /etc/udev/rules.d/50-hdparm.rules
+echo "cp startup.desktop"
+sudo rm -f /usr/share/xsessions/startup.desktop
+sudo cp $DIR/startup.desktop /usr/share/xsessions/startup.desktop
 
 #cat $DIR/mate-terminal-dump.dconf | dconf load /org/mate/terminal/
+echo "cp 99-wlan"
+sudo rm -f /etc/NetworkManager/dispatcher.d/99-wlan
+sudo cp $DIR/networkmanager/99-wlan /etc/NetworkManager/dispatcher.d/99-wlan
