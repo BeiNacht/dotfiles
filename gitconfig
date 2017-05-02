@@ -9,3 +9,4 @@
 	autocrlf = false
 [branch]
 	autosetuprebase = always
+	excludesfile = /home/bernd/.gitignore_global
