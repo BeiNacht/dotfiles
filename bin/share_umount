@@ -1,3 +1,0 @@
-sudo umount -l ~/share/data
-sudo umount -l ~/share/movies
-sudo umount -l ~/share/videos

@@ -1,0 +1,14 @@
+BORG_RSH="ssh -i /home/bernd/.ssh/id_rsa" \
+BORG_PASSPHRASE="6wE1Nuh1FJGisW69" \
+borg create -v -s -p -C lz4 \
+  bernd@server.lan:/mnt/data/repository::'{hostname}-{now:%Y-%m-%d}'  \
+  /                                                                   \
+  --exclude '/home/*/.cache'                                          \
+  --exclude /mnt/                                                     \
+  --exclude '*.pyc'                                                   \
+  --exclude /proc/                                                    \
+  --exclude /sys/                                                     \
+  --exclude /dev/                                                     \
+  --exclude /lost+found                                               \
+  --exclude /swapfile                                                 \
+  --exclude /run/

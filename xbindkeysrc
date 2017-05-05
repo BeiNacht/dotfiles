@@ -1,6 +1,0 @@
-# remap mouse button as middleclick
-"xdotool click 2"
-  b:6
-
-"xdotool click 2"
-  b:7
