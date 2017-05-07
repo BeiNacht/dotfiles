@@ -6,7 +6,6 @@ export LC_COLLATE="en_US.UTF-8"
 export LC_MESSAGES="en_US.UTF-8"
 
 xrdb -merge .Xresources &
-nitrogen --restore &
 unclutter &
 compton &
 pa-applet &
