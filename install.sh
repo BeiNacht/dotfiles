@@ -61,12 +61,16 @@ echo "link apm.service"
 sudo rm -f sudo rm -f /etc/systemd/system/apm.service
 sudo ln -s $DIR/systemd/apm.service /etc/systemd/system/apm.service
 
+echo "link smb.conf"
+sudo rm -f /etc/samba/smb.conf
+sudo ln -s $DIR/etc/samba/smb.conf /etc/samba/smb.conf
+
+echo "link 99-wlan"
+sudo rm -f /etc/NetworkManager/dispatcher.d/99-wlan
+sudo ln -s $DIR/networkmanager/99-wlan /etc/NetworkManager/dispatcher.d/99-wlan
+
 echo "cp startup.desktop"
 sudo rm -f /usr/share/xsessions/startup.desktop
 sudo cp $DIR/startup.desktop /usr/share/xsessions/startup.desktop
 
 #cat $DIR/mate-terminal-dump.dconf | dconf load /org/mate/terminal/
-echo "cp 99-wlan"
-sudo rm -f /etc/NetworkManager/dispatcher.d/99-wlan
-sudo cp $DIR/networkmanager/99-wlan /etc/NetworkManager/dispatcher.d/99-wlan
-
