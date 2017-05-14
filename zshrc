@@ -1,9 +1,9 @@
 ZSH_THEME="spaceship"
 plugins=(archlinux common-aliases docker npm systemd git)
 export SPACESHIP_PROMPT_ADD_NEWLINE=false
-export ZSH=/home/bernd/.oh-my-zsh
-export PATH="/home/bernd/.bin:/home/bernd/.gem/ruby/2.4.0/bin:$PATH"
-export DEFAULT_USER="bernd"
+export ZSH=/home/alex/.oh-my-zsh
+export PATH="/home/alex/.bin:/home/alex/.gem/ruby/2.4.0/bin:$PATH"
+export DEFAULT_USER="alex"
 export LANG=en_US.UTF-8
 export EDITOR='nano'
 export ARCHFLAGS="-arch x86_64"

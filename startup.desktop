@@ -1,6 +1,6 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Desktop
-Exec=/home/bernd/.bin/startup
+Exec=/home/alex/.bin/startup
 Icon=i3
 Type=Application
