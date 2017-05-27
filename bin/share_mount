@@ -1,3 +1,2 @@
-sudo mount -t nfs -o vers=4 192.168.0.100:/data /mnt/data
-sudo mount -t nfs -o vers=4 192.168.0.100:/movies /mnt/movies
-sudo mount -t nfs -o vers=4 192.168.0.100:/videos /mnt/videos
+#!/bin/bash
+sudo mount -t nfs -o vers=4 192.168.0.100:/$1 /mnt/$1

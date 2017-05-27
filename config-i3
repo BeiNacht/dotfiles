@@ -10,6 +10,7 @@ smart_gaps on
 bindsym $mod+Shift+Return exec rofi -show run
 bindsym $mod+Return exec mate-terminal
 bindsym $mod+Shift+c kill
+bindsym $mod+s exec /home/bernd/.bin/rofi-power
 bindsym $mod+Shift+s restart
 bindsym $mod+Shift+a reload
 bindsym --whole-window $mod+button2 floating toggle
@@ -18,15 +19,20 @@ bindsym $mod+d layout toggle split
 bindsym $mod+space focus mode_toggle
 bindsym $mod+z layout tabbed
 bindsym $mod+x exec "notify-send Time $(date '+%H:%M')"
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5% && notify-send Sound $(pactl list sinks | grep -E 'Volume:' | head -1 | cut -d ' ' -f 6)"
+bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5% && notify-send Sound $(pactl list sinks | grep -E 'Volume:' | head -1 | cut -d ' ' -f 6)"
+bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle && notify-send Mute $(pactl list sinks | grep -E Mute | cut -d ' ' -f2)"
 bindsym $mod+h split h
 bindsym $mod+v split v
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+bindsym $mod+l exec xscreensaver-command -lock
 bindsym $mod+k workspace next
 bindsym $mod+j workspace prev
 bindsym $mod+Tab workspace next
+bindsym $mod+Shift+m move workspace to output right
 bindsym $mod+m bar mode toggle
 bindsym $mod+Shift+m move workspace to output right
 bindsym $mod+Shift+Left move left
@@ -35,9 +41,9 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 bindsym $mod+c [ urgent=latest ] focus
 
-for_window [ workspace="10" ] floating enable
 for_window [ class="Mate-terminal" ] floating enable
 for_window [ class="Nemo" ] floating enable
+for_window [ class="Google-chrome" title="^Developer Tools - *" ] floating enable
 
 bindsym $mod+q workspace 1
 bindsym $mod+w workspace 2

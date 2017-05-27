@@ -6,4 +6,7 @@
 	required = true
 	clean = git-lfs clean -- %f
 [core]
+	autocrlf = false
+[branch]
+	autosetuprebase = always
 	excludesfile = /home/bernd/.gitignore_global
