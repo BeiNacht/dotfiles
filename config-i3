@@ -34,7 +34,6 @@ bindsym $mod+j workspace prev
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+m move workspace to output right
 bindsym $mod+m bar mode toggle
-bindsym $mod+Shift+m move workspace to output right
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
