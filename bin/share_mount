@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo mount -t nfs -o vers=4 server.lan:/$1 /mnt/$1
+sudo mount -t nfs -o vers=4 192.168.0.100:/$1 /mnt/$1

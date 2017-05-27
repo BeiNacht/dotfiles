@@ -32,29 +32,18 @@ bindsym $mod+Right focus right
 bindsym $mod+l exec xscreensaver-command -lock
 bindsym $mod+k workspace next
 bindsym $mod+j workspace prev
+bindsym $mod+Tab workspace next
 bindsym $mod+Shift+m move workspace to output right
-bindsym $mod+Tab exec rofi -show
 bindsym $mod+m bar mode toggle
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+bindsym $mod+c [ urgent=latest ] focus
 
-for_window [class="Mate-terminal"] floating enable
-for_window [class="Nemo"] floating enable
-for_window [class="Google-chrome" title="^Developer Tools - *"] floating enable
-
-# switch to workspace
-bindsym $mod+1 workspace 1; exec "notify-send 1"
-bindsym $mod+2 workspace 2; exec "notify-send 2"
-bindsym $mod+3 workspace 3; exec "notify-send 3"
-bindsym $mod+4 workspace 4; exec "notify-send 4"
-bindsym $mod+5 workspace 5; exec "notify-send 5"
-bindsym $mod+6 workspace 6; exec "notify-send 6"
-bindsym $mod+7 workspace 7; exec "notify-send 7"
-bindsym $mod+8 workspace 8; exec "notify-send 8"
-bindsym $mod+9 workspace 9; exec "notify-send 9"
-bindsym $mod+0 workspace 10; exec "notify-send 10"
+for_window [ class="Mate-terminal" ] floating enable
+for_window [ class="Nemo" ] floating enable
+for_window [ class="Google-chrome" title="^Developer Tools - *" ] floating enable
 
 bindsym $mod+q workspace 1; exec "notify-send  1"
 bindsym $mod+w workspace 2; exec "notify-send  2"
@@ -66,18 +55,6 @@ bindsym $mod+u workspace 7; exec "notify-send  7"
 bindsym $mod+i workspace 8; exec "notify-send  8"
 bindsym $mod+o workspace 9; exec "notify-send  9"
 bindsym $mod+p workspace 10; exec "notify-send  10"
-
-# move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1; workspace 1; exec "notify-send  1"
-bindsym $mod+Shift+2 move container to workspace 2; workspace 2; exec "notify-send  2"
-bindsym $mod+Shift+3 move container to workspace 3; workspace 3; exec "notify-send  3"
-bindsym $mod+Shift+4 move container to workspace 4; workspace 4; exec "notify-send  4"
-bindsym $mod+Shift+5 move container to workspace 5; workspace 5; exec "notify-send  5"
-bindsym $mod+Shift+6 move container to workspace 6; workspace 6; exec "notify-send  6"
-bindsym $mod+Shift+7 move container to workspace 7; workspace 7; exec "notify-send  7"
-bindsym $mod+Shift+8 move container to workspace 8; workspace 8; exec "notify-send  8"
-bindsym $mod+Shift+9 move container to workspace 9; workspace 9; exec "notify-send  9"
-bindsym $mod+Shift+0 move container to workspace 10; workspace 10; exec "notify-send  10"
 
 # move focused container to workspace
 bindsym $mod+Shift+q move container to workspace 1; workspace 1; exec "notify-send  1"
