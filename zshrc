@@ -28,7 +28,7 @@ fi
 
 alias sm="cd src/shared && git checkout master && git pull && cd ../.."
 alias vv="gulp serve --env local"
-alias geno="gulp serve --env local --profile geno --instance bank1"
+alias geno="gulp serve --env local --profile geno --instance"
 alias gaa="git add --all && git reset src/index.ts"
 
 setopt hist_ignore_space
