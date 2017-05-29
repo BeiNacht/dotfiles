@@ -1,5 +1,5 @@
 ZSH_THEME="spaceship"
-plugins=(archlinux common-aliases docker npm systemd git)
+plugins=(archlinux common-aliases cp docker systemd git)
 export SPACESHIP_PROMPT_ADD_NEWLINE=false
 export ZSH=/home/alex/.oh-my-zsh
 export PATH="/home/alex/.bin:/home/alex/.gem/ruby/2.4.0/bin:$PATH"
@@ -15,7 +15,8 @@ alias pac-big-size="expac --humansize=M '%m %n' | sort -n"
 alias active-services="systemctl --no-page --no-legend --plain -t service --state=running"
 alias -g C="| wc -l"
 alias -g G="| grep --ignore-case"
-alias installed-packages="comm -23 <(yaourt -Qqe|sort) <(pacman -Qqg base base-devel|sort)"
+alias installed-packages="comm -23 <(yaourt -Qqt|sort) <(pacman -Qqg base base-devel|sort)"
+alias bat="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
 
 ###-tns-completion-start-###
 if [ -f /home/alex/.tnsrc ]; then

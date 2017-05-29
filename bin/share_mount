@@ -1,3 +1,0 @@
-sudo mount -t nfs -o vers=4 server.lan:/data /mnt/data
-sudo mount -t nfs -o vers=4 server.lan:/movies /mnt/movies
-sudo mount -t nfs -o vers=4 server.lan:/videos /mnt/videos
