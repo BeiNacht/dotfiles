@@ -1,5 +1,5 @@
 ZSH_THEME="spaceship"
-plugins=(battery common-aliases cp docker systemd git)
+plugins=(common-aliases cp docker npm systemd git)
 export SPACESHIP_PROMPT_ADD_NEWLINE=false
 export ZSH=/home/bernd/.oh-my-zsh
 export PATH="/home/bernd/.bin:/home/bernd/.gem/ruby/2.4.0/bin:$PATH"
