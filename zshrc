@@ -1,5 +1,5 @@
 ZSH_THEME="spaceship"
-plugins=(battery common-aliases cp docker systemd git)
+plugins=(common-aliases cp docker systemd git)
 export SPACESHIP_PROMPT_ADD_NEWLINE=false
 export ZSH=/home/bernd/.oh-my-zsh
 export PATH="/home/bernd/.bin:/home/bernd/.gem/ruby/2.4.0/bin:$PATH"
@@ -19,6 +19,8 @@ alias installed-packages="comm -23 <(yaourt -Qqt|sort) <(pacman -Qqg base base-d
 alias bat="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
 alias activate-smb="sc-start smbd && sc-start nmbd"
 alias stop-smb="sc-stop smbd && sc-stop nmbd"
+alias brightness-max="echo 4794 | sudo tee /sys/class/backlight/intel_backlight/brightness"
+alias brightness-power-save="echo 2300 | sudo tee /sys/class/backlight/intel_backlight/brightness"
 
 if [ -f /home/bernd/.tnsrc ]; then
     source /home/bernd/.tnsrc

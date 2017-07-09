@@ -20,8 +20,8 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+z layout tabbed
 bindsym $mod+x exec "notify-send Time $(date '+%H:%M')"
 bindsym $mod+b exec "notify-send Battery $(upower -i $(upower -e | grep 'BAT') | grep -E 'percentage' | cut -d ' ' -f15)"
-bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5% && notify-send Sound $(pactl list sinks | grep -E 'Volume:' | head -1 | cut -d ' ' -f 6)"
-bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5% && notify-send Sound $(pactl list sinks | grep -E 'Volume:' | head -1 | cut -d ' ' -f 6)"
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%"
+bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5%"
 bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle && notify-send Mute $(pactl list sinks | grep -E Mute | cut -d ' ' -f2)"
 bindsym $mod+h split h
 bindsym $mod+v split v
@@ -41,9 +41,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 bindsym $mod+c [ urgent=latest ] focus
 
-for_window [ class="Mate-terminal" ] floating enable
-for_window [ class="Nemo" ] floating enable
-for_window [ class="Google-chrome" title="^Developer Tools - *" ] floating enable
+for_window [ class="[.]*" ] floating enable
 
 bindsym $mod+q workspace 1; exec "notify-send  1"
 bindsym $mod+w workspace 2; exec "notify-send  2"
@@ -76,7 +74,7 @@ bar {
     position          top
     mode              hide
     modifier          none
-    workspace_buttons yes
+    workspace_buttons no
     tray_output       primary
 
     font pango:xos4 Terminus Regular 10
@@ -84,9 +82,5 @@ bar {
     colors {
         background #000000
         statusline #ffffff
-
-        focused_workspace  #1c1c1c #000000
-        active_workspace   #A6A6A6 #A6A6A6
-        inactive_workspace #4c4c4c #000000
     }
 }
