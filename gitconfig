@@ -1,5 +1,5 @@
 [user]
-	email = alexander.szczepanski.ext@cofinpro.de
+	email = alexander@szczepan.ski
 	name = Alexander Szczepanski
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f

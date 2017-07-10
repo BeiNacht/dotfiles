@@ -1,8 +1,9 @@
 ZSH_THEME="spaceship"
 plugins=(archlinux common-aliases cp docker systemd git)
+export ANDROID_HOME=/opt/android-sdk
 export SPACESHIP_PROMPT_ADD_NEWLINE=false
 export ZSH=/home/alex/.oh-my-zsh
-export PATH="/home/alex/.bin:/home/alex/.gem/ruby/2.4.0/bin:$PATH"
+export PATH="/home/alex/.bin:/home/alex/.gem/ruby/2.4.0/bin:/opt/android-sdk/platform-tools/:$PATH"
 export DEFAULT_USER="alex"
 export LANG=en_US.UTF-8
 export EDITOR='nano'

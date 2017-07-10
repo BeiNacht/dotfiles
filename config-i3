@@ -43,9 +43,7 @@ bindsym $mod+c [ urgent=latest ] focus
 bindsym $mod+Shift+x scratchpad show
 bindsym $mod+Shift+z [floating] move scratchpad
 
-for_window [ class="Mate-terminal" ] floating enable
-for_window [ class="Nemo" ] floating enable
-for_window [ class="Google-chrome" title="^Developer Tools - *" ] floating enable
+for_window [class="[.]*"] floating enable
 
 bindsym $mod+q workspace 1; exec "notify-send  1"
 bindsym $mod+w workspace 2; exec "notify-send  2"
