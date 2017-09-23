@@ -19,9 +19,9 @@ bindsym $mod+d layout toggle split
 bindsym $mod+space focus mode_toggle
 bindsym $mod+z layout tabbed
 bindsym $mod+x exec "notify-send Time $(date '+%H:%M')"
-bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 2 +5%"
-bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 2 -5%"
-bindsym XF86AudioMute exec "pactl set-sink-mute 2 toggle && notify-send Mute $(pactl list sinks | grep -E Mute | cut -d ' ' -f2)"
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%"
+bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5%"
+bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle && notify-send Mute $(pactl list sinks | grep -E Mute | cut -d ' ' -f2)"
 bindsym $mod+h split h
 bindsym $mod+v split v
 bindsym $mod+Left focus left
