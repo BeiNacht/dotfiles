@@ -15,11 +15,11 @@ ln -s $DIR/thinkpad/zshrc $HOME/.zshrc
 
 echo "link gitconfig"
 rm -f $HOME/.gitconfig
-ln -s $DIR/thinkpad/gitconfig $HOME/.gitconfig
+ln -s $DIR/gitconfig $HOME/.gitconfig
 
 echo "link nanorc"
 rm -f $HOME/.nanorc
-ln -s $DIR/thinkpad/nanorc $HOME/.nanorc
+ln -s $DIR/nanorc $HOME/.nanorc
 
 echo "link synergy.conf"
 rm -f $HOME/.synergy.conf
@@ -27,7 +27,7 @@ ln -s $DIR/thinkpad/synergy.conf $HOME/.synergy.conf
 
 echo "link spaceship.zsh-theme"
 rm -f $HOME/.oh-my-zsh/themes/spaceship.zsh-theme
-ln -s $DIR/thinkpad/spaceship.zsh-theme $HOME/.oh-my-zsh/themes/spaceship.zsh-theme
+ln -s $DIR/spaceship.zsh-theme $HOME/.oh-my-zsh/themes/spaceship.zsh-theme
 
 echo "link bin"
 rm -f $HOME/.bin
@@ -71,6 +71,6 @@ sudo ln -s $DIR/thinkpad/networkmanager/99-wlan /etc/NetworkManager/dispatcher.d
 
 echo "cp startup.desktop"
 sudo rm -f /usr/share/xsessions/startup.desktop
-sudo cp $DIR/thinkpad/startup.desktop /usr/share/xsessions/startup.desktop
+sudo cp $DIR/startup.desktop /usr/share/xsessions/startup.desktop
 
 #cat $DIR/thinkpad/mate-terminal-dump.dconf | dconf load /org/mate/terminal/
