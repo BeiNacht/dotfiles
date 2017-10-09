@@ -74,7 +74,7 @@ bar {
     position          top
     mode              hide
     modifier          none
-    workspace_buttons no
+    workspace_buttons yes
     tray_output       primary
 
     font pango:xos4 Terminus Regular 10
@@ -82,5 +82,9 @@ bar {
     colors {
         background #000000
         statusline #ffffff
+
+        focused_workspace  #1c1c1c #000000
+        active_workspace   #A6A6A6 #A6A6A6
+        inactive_workspace #4c4c4c #000000
     }
 }

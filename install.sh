@@ -3,15 +3,15 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "link compton"
 rm -f $HOME/.compton.conf
-ln -s $DIR/thinkpad/compton.conf $HOME/.compton.conf
+ln -s $DIR/compton.conf $HOME/.compton.conf
 
 echo "link Xresources"
 rm -f $HOME/.Xresources
-ln -s $DIR/thinkpad/Xresources $HOME/.Xresources
+ln -s $DIR/Xresources $HOME/.Xresources
 
 echo "link zsh"
 rm -f $HOME/.zshrc
-ln -s $DIR/thinkpad/zshrc $HOME/.zshrc
+ln -s $DIR/zshrc $HOME/.zshrc
 
 echo "link gitconfig"
 rm -f $HOME/.gitconfig
@@ -31,15 +31,15 @@ ln -s $DIR/spaceship.zsh-theme $HOME/.oh-my-zsh/themes/spaceship.zsh-theme
 
 echo "link bin"
 rm -f $HOME/.bin
-ln -s $DIR/thinkpad/bin $HOME/.bin
+ln -s $DIR/bin $HOME/.bin
 
 echo "link i3"
 rm -f $HOME/.config/i3/config
-ln -s $DIR/thinkpad/config-i3 $HOME/.config/i3/config
+ln -s $DIR/config-i3 $HOME/.config/i3/config
 
 echo "link dunst"
 rm -f $HOME/.config/dunst/dunstrc
-ln -s $DIR/thinkpad/dunstrc $HOME/.config/dunst/dunstrc
+ln -s $DIR/dunstrc $HOME/.config/dunst/dunstrc
 
 echo "link 20-intel.conf"
 sudo rm -f /etc/X11/xorg.conf.d/20-intel.conf
