@@ -7,8 +7,8 @@ export LC_MESSAGES="en_US.UTF-8"
 
 xrdb -merge .Xresources &
 nm-applet &
+xscreensaver &
 compton &
-pa-applet &
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
 export SSH_AUTH_SOCK
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &

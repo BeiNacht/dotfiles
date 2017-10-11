@@ -2,10 +2,11 @@ new_window 1pixel
 new_float 1pixel
 hide_edge_borders smart
 set $mod Mod4
-font pango:xos4 Terminus Regular 10
+font pango:Hack Regular 10
 floating_modifier $mod
 gaps inner 5
 smart_gaps on
+focus_follows_mouse no
 
 bindsym $mod+Shift+Return exec rofi -show run
 bindsym $mod+Return exec mate-terminal
@@ -34,14 +35,13 @@ bindsym $mod+k workspace next
 bindsym $mod+j workspace prev
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+m move workspace to output right
-bindsym $mod+m bar mode toggle
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 bindsym $mod+c [ urgent=latest ] focus
 
-for_window [ class="[.]*" ] floating enable
+for_window [ class="^(?!Code)(?!Chromium)(?!Geary)(?!KeeWeb).*$" ] floating enable
 
 bindsym $mod+q workspace 1; exec "notify-send  1"
 bindsym $mod+w workspace 2; exec "notify-send  2"
@@ -75,9 +75,8 @@ bar {
     mode              hide
     modifier          none
     workspace_buttons yes
-    tray_output       primary
 
-    font pango:xos4 Terminus Regular 10
+    font pango:Hack Regular 10
 
     colors {
         background #000000

@@ -1,5 +1,5 @@
 ZSH_THEME="spaceship"
-plugins=(common-aliases cp docker systemd git)
+plugins=(common-aliases zsh-autosuggestions cp docker systemd git)
 export SPACESHIP_PROMPT_ADD_NEWLINE=false
 export ZSH=/home/bernd/.oh-my-zsh
 export PATH="/home/bernd/.bin:/home/bernd/.gem/ruby/2.4.0/bin:$PATH"
@@ -21,14 +21,12 @@ alias activate-smb="sc-start smbd && sc-start nmbd"
 alias stop-smb="sc-stop smbd && sc-stop nmbd"
 alias brightness-max="echo 4794 | sudo tee /sys/class/backlight/intel_backlight/brightness"
 alias brightness-power-save="echo 2300 | sudo tee /sys/class/backlight/intel_backlight/brightness"
+alias ff='find . -type f -iname'
 
-if [ -f /home/bernd/.tnsrc ]; then
-    source /home/bernd/.tnsrc
-fi
-
-if [ -f /usr/share/nvm/init-nvm.sh ]; then
+if [[ -f /usr/share/nvm/init-nvm.sh ]] && [[ -z ${LAUNCHER} ]]; then
     source /usr/share/nvm/init-nvm.sh
 fi
 
 setopt hist_ignore_space
 setopt hist_ignore_all_dups
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=7'
