@@ -41,7 +41,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 bindsym $mod+c [ urgent=latest ] focus
 
-for_window [ class="^(?!Code)(?!Chromium)(?!Geary)(?!KeeWeb).*$" ] floating enable
+for_window [ class="^(?!Code)(?!Chromium)(?!Geary)(?!KeeWeb)(?!Nemo)(?!Virt-manager).*$" ] floating enable
 
 bindsym $mod+q workspace 1; exec "notify-send  1"
 bindsym $mod+w workspace 2; exec "notify-send  2"
