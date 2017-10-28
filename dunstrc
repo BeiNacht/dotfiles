@@ -1,5 +1,5 @@
 [global]
-    font = Hack Regular 10
+    font = Hack Regular 13
     allow_markup = yes
     format = "<u>%s</u>\n%b"
     sort = yes
