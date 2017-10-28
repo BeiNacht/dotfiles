@@ -6,6 +6,7 @@ font pango:xos4 Terminus Regular 10
 floating_modifier $mod
 gaps inner 5
 smart_gaps on
+focus_follows_mouse no
 
 bindsym $mod+Shift+Return exec rofi -show run
 bindsym $mod+Return exec mate-terminal
@@ -19,9 +20,9 @@ bindsym $mod+d layout toggle split
 bindsym $mod+space focus mode_toggle
 bindsym $mod+z layout tabbed
 bindsym $mod+x exec "notify-send Time $(date '+%H:%M')"
-bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%"
-bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5%"
-bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle && notify-send Mute $(pactl list sinks | grep -E Mute | cut -d ' ' -f2)"
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 1 +5%"
+bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 1 -5%"
+bindsym XF86AudioMute exec "pactl set-sink-mute 1 toggle && notify-send Mute $(pactl list sinks | grep -E Mute | cut -d ' ' -f2)"
 bindsym $mod+h split h
 bindsym $mod+v split v
 bindsym $mod+Left focus left
@@ -40,7 +41,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 bindsym $mod+c [ urgent=latest ] focus
 
-for_window [class="[.]*"] floating enable
+for_window [ class="[.]*" ] floating enable
 
 bindsym $mod+q workspace 1; exec "notify-send  1"
 bindsym $mod+w workspace 2; exec "notify-send  2"

@@ -4,11 +4,11 @@ Xcursor.size: 16
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-rofi.color-window: argb:aa000000, argb:aa000000, argb:00000000
+rofi.color-window: argb:f1000000, argb:f1000000, argb:00000000
 rofi.color-normal: argb:00000000, #a6a6a6, argb:00000000, #a6a6a6, #000000
 rofi.color-active: argb:00000000, #268bd2, #a6a6a6, #268bd2, #a6a6a6
 rofi.color-urgent: argb:00000000, #dc322f, #a6a6a6, #dc322f, #a6a6a6
 rofi.separator-style: solid
-rofi.fullscreen: true
-rofi.padding: 400
+!rofi.fullscreen: true
+!rofi.padding: 400
 rofi.font: Hack Regular 13
