@@ -1,8 +1,8 @@
-ZSH_THEME="spaceship"
+ZSH_THEME="agnoster"
 plugins=(common-aliases zsh-autosuggestions cp docker systemd git)
 export SPACESHIP_PROMPT_ADD_NEWLINE=false
 export ZSH=/home/bernd/.oh-my-zsh
-export PATH="/home/bernd/.bin:/home/bernd/.gem/ruby/2.4.0/bin:$PATH"
+export PATH="/home/bernd/.bin:/home/bernd/.gem/ruby/2.4.0/bin:/home/bernd/.npm/bin:$PATH"
 export DEFAULT_USER="bernd"
 export LANG=en_US.UTF-8
 export EDITOR='nano'
