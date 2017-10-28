@@ -21,10 +21,6 @@ echo "link nanorc"
 rm -f $HOME/.nanorc
 ln -s $DIR/nanorc $HOME/.nanorc
 
-echo "link synergy.conf"
-rm -f $HOME/.synergy.conf
-ln -s $DIR/thinkpad/synergy.conf $HOME/.synergy.conf
-
 echo "link spaceship.zsh-theme"
 rm -f $HOME/.oh-my-zsh/themes/spaceship.zsh-theme
 ln -s $DIR/spaceship.zsh-theme $HOME/.oh-my-zsh/themes/spaceship.zsh-theme
@@ -41,36 +37,44 @@ echo "link dunst"
 rm -f $HOME/.config/dunst/dunstrc
 ln -s $DIR/dunstrc $HOME/.config/dunst/dunstrc
 
-echo "link 20-intel.conf"
-sudo rm -f /etc/X11/xorg.conf.d/20-intel.conf
-sudo ln -s $DIR/thinkpad/xorg.conf.d/20-intel.conf /etc/X11/xorg.conf.d/20-intel.conf
-
-echo "link audio_powersave.conf"
-sudo rm -f /etc/modprobe.d/audio_powersave.conf
-sudo ln -s $DIR/thinkpad/modprobe/audio_powersave.conf /etc/modprobe.d/audio_powersave.conf
-
-echo "link blacklist.conf"
-sudo rm -f /etc/modprobe.d/blacklist.conf
-sudo ln -s $DIR/thinkpad/modprobe/blacklist.conf /etc/modprobe.d/blacklist.conf
-
-echo "link 50-hdparm.rules"
-sudo rm -f /etc/udev/rules.d/50-hdparm.rules
-sudo ln -s $DIR/thinkpad/udev-rules/50-hdparm.rules /etc/udev/rules.d/50-hdparm.rules
-
-echo "link apm.service"
-sudo rm -f sudo rm -f /etc/systemd/system/apm.service
-sudo ln -s $DIR/thinkpad/systemd/apm.service /etc/systemd/system/apm.service
-
-echo "link smb.conf"
-sudo rm -f /etc/samba/smb.conf
-sudo ln -s $DIR/thinkpad/etc/samba/smb.conf /etc/samba/smb.conf
-
-echo "link 99-wlan"
-sudo rm -f /etc/NetworkManager/dispatcher.d/99-wlan
-sudo ln -s $DIR/thinkpad/networkmanager/99-wlan /etc/NetworkManager/dispatcher.d/99-wlan
-
 echo "cp startup.desktop"
 sudo rm -f /usr/share/xsessions/startup.desktop
 sudo cp $DIR/startup.desktop /usr/share/xsessions/startup.desktop
+
+if [ $(hostname -s) = "thinkpad" ]; then
+    echo "link 20-intel.conf"
+    sudo rm -f /etc/X11/xorg.conf.d/20-intel.conf
+    sudo ln -s $DIR/thinkpad/xorg.conf.d/20-intel.conf /etc/X11/xorg.conf.d/20-intel.conf
+
+    echo "link audio_powersave.conf"
+    sudo rm -f /etc/modprobe.d/audio_powersave.conf
+    sudo ln -s $DIR/thinkpad/modprobe/audio_powersave.conf /etc/modprobe.d/audio_powersave.conf
+
+    echo "link blacklist.conf"
+    sudo rm -f /etc/modprobe.d/blacklist.conf
+    sudo ln -s $DIR/thinkpad/modprobe/blacklist.conf /etc/modprobe.d/blacklist.conf
+
+    echo "link 50-hdparm.rules"
+    sudo rm -f /etc/udev/rules.d/50-hdparm.rules
+    sudo ln -s $DIR/thinkpad/udev-rules/50-hdparm.rules /etc/udev/rules.d/50-hdparm.rules
+
+    echo "link apm.service"
+    sudo rm -f sudo rm -f /etc/systemd/system/apm.service
+    sudo ln -s $DIR/thinkpad/systemd/apm.service /etc/systemd/system/apm.service
+
+    echo "link smb.conf"
+    sudo rm -f /etc/samba/smb.conf
+    sudo ln -s $DIR/thinkpad/etc/samba/smb.conf /etc/samba/smb.conf
+
+    echo "link 99-wlan"
+    sudo rm -f /etc/NetworkManager/dispatcher.d/99-wlan
+    sudo ln -s $DIR/thinkpad/networkmanager/99-wlan /etc/NetworkManager/dispatcher.d/99-wlan
+fi
+
+if [ $(hostname -s) = "pc" ]; then
+    echo "link 20-radeon.conf"
+    sudo rm -f /etc/X11/xorg.conf.d/20-radeon.conf
+    sudo ln -s $DIR/workstation/xorg.conf.d/20-radeon.conf /etc/X11/xorg.conf.d/20-radeon.conf
+fi
 
 #cat $DIR/thinkpad/mate-terminal-dump.dconf | dconf load /org/mate/terminal/
