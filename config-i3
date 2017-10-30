@@ -8,10 +8,9 @@ gaps inner 5
 smart_gaps on
 focus_follows_mouse no
 
-bindsym $mod+Shift+Return exec rofi -show run
+bindsym $mod+Shift+Return exec albert show
 bindsym $mod+Return exec mate-terminal
 bindsym $mod+Shift+c kill
-bindsym $mod+s exec /home/bernd/.bin/rofi-power
 bindsym $mod+Shift+s restart
 bindsym $mod+Shift+a reload
 bindsym --whole-window $mod+button2 floating toggle
