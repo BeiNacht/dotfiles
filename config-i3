@@ -8,7 +8,7 @@ gaps inner 5
 smart_gaps on
 focus_follows_mouse no
 
-bindsym $mod+Shift+Return exec albert show
+bindsym $mod+Shift+Return exec exec rofi -show run
 bindsym $mod+Return exec mate-terminal
 bindsym $mod+Shift+c kill
 bindsym $mod+Shift+s restart
@@ -41,6 +41,7 @@ bindsym $mod+Shift+m move workspace to output right
 #bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move container to workspace next
 bindsym $mod+c [ urgent=latest ] focus
+bindsym $mod+m bar mode toggle
 
 for_window [ class="^(?!Code)(?!Chromium)(?!Geary)(?!KeeWeb)(?!Nemo)(?!Virt-manager).*$" ] floating enable
 

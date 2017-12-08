@@ -1,0 +1,5 @@
+super + z
+	notify-send Time $(date '+%H:%M')
+
+super + s
+	notify-send Battery $(upower -i $(upower -e | grep 'BAT') | grep -E 'percentage' | cut -d ' ' -f15)

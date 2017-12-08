@@ -37,6 +37,10 @@ echo "link dunst"
 rm -f $HOME/.config/dunst/dunstrc
 ln -s $DIR/dunstrc $HOME/.config/dunst/dunstrc
 
+echo "link sxhdkrc"
+rm -f $HOME/.config/sxhkd/sxhkdrc
+ln -s $DIR/sxhkdrc $HOME/.config/sxhkd/sxhkdrc
+
 echo "cp startup.desktop"
 sudo rm -f /usr/share/xsessions/startup.desktop
 sudo cp $DIR/startup.desktop /usr/share/xsessions/startup.desktop
