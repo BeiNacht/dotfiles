@@ -3,3 +3,15 @@ super + z
 
 super + s
 	notify-send Battery $(upower -i $(upower -e | grep 'BAT') | grep -E 'percentage' | cut -d ' ' -f15)
+
+alt + Tab
+	rofi -show window
+
+XF86AudioMute
+	pactl set-sink-mute 0 toggle
+
+super + Return
+	gnome-terminal
+
+super + Shift + Return
+	rofi -show run

@@ -9,11 +9,12 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 xrdb -merge .Xresources &
 nm-applet &
 blueman-applet &
-xscreensaver &
+xscreensaver -no-splash &
 compton &
 sxhkd &
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
-export SSH_AUTH_SOCK
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-/home/bernd/2bwm/2bwm
-#compiz --reload
+
+while true; do
+	/home/bernd/.2bwm/2bwm
+	sleep 1
+done
