@@ -8,7 +8,7 @@ alt + Tab
 	rofi -show window
 
 XF86AudioMute
-	pactl set-sink-mute 0 toggle
+	pulseaudio-ctl mute
 
 super + Return
 	gnome-terminal

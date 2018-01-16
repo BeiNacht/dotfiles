@@ -1,3 +1,4 @@
+#!/bin/zsh
 M=1
 REC=$(slop -t 0 -b 1 -c 1,1,1,1 -f "%w %h %x %y" --nokeyboard) || exit 1
 IFS=' ' read -r W H X Y <<< "$REC"
@@ -8,7 +9,7 @@ if [ "$W" -gt "1" ]; then
     let W=$(( $W / 9))
     let H=$(( $H / 21))
 
-    mate-terminal --geometry $W"x"$H"+"$X"+"$Y &
+    gnome-terminal --geometry $W"x"$H"+"$X"+"$Y &
 
     for i in {0..49}; do # timeout
         if ps -p $! >/dev/null; then

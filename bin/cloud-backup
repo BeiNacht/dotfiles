@@ -8,6 +8,10 @@ borg create \
     --show-rc \
     --compression lz4 \
     --exclude-caches \
-    --exclude '.cache/*' \
-    /run/media/bernd/bd821349-b2c3-46d4-b8c2-a430e4aaca04/borg::'{now:%Y-%m-%d}' \
-    .
+    cloud-backup::'{now:%Y-%m-%d}' \
+    Documents \
+    Desktop \
+    Data \
+    Backup \
+    Workspace \
+    Pictures

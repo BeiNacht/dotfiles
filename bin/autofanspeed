@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/bin/zsh
 sudo echo level auto | sudo tee /proc/acpi/ibm/fan

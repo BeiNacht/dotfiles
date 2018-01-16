@@ -1,1 +1,2 @@
-expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -50
+#!/bin/zsh
+expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort

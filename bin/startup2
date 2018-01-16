@@ -6,6 +6,7 @@ export LC_COLLATE="en_US.UTF-8"
 export LC_MESSAGES="en_US.UTF-8"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+autorandr -c &
 xrdb -merge .Xresources &
 nm-applet &
 blueman-applet &
@@ -15,6 +16,6 @@ sxhkd &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 while true; do
-	/home/bernd/.2bwm/2bwm
-	sleep 1
+    /home/bernd/.2bwm/2bwm
+    sleep 1
 done

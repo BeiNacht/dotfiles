@@ -1,20 +1,23 @@
 #!/bin/bash
 /usr/share/fslint/fslint/findup \( \
     -path "*/node_modules" \
-    -o -path "*/.atom" \
     -o -path "*/.cache" \
     -o -path "*/.kodi" \
     -o -path "*/.config" \
     -o -path "*/.node-gyp" \
-    -o -path "*/platforms/android" \
     -o -path "*/.jd" \
     -o -path "*/.themes" \
-    -o -path "*/app/App_Resources" \
     -o -path "*/.gem" \
     -o -path "*/.git" \
+    -o -path "*/.tldr" \
     -o -path "*/.viking-maps" \
     -o -path "*/Workspace" \
     -o -path "*/.vscode" \
-    -o -path "*/.local/share/backgrounds" \
-    -o -path "*/.local/share/icons" \
-    \) -prune -o \( ! -name "*.json" \)
+    -o -path "*/.local/share" \
+    -o -path "*/.dotfiles" \
+    -o -path "*/.ssh" \
+    \) -prune -o
+
+
+#-o -path "*/app/App_Resources" \
+#-o -path "*/platforms/android" \
