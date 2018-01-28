@@ -30,6 +30,3 @@ fi
 setopt hist_ignore_space
 setopt hist_ignore_all_dups
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=7'
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
-export SSH_AUTH_SOCK
-

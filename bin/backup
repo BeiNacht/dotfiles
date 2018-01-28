@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 cd ~
 borg create \
     --verbose \
@@ -9,5 +9,18 @@ borg create \
     --compression lz4 \
     --exclude-caches \
     --exclude '.cache/*' \
-    /run/media/bernd/bd821349-b2c3-46d4-b8c2-a430e4aaca04/borg::'{now:%Y-%m-%d}' \
+    --exclude 'cloud-backup/*' \
+    --exclude '.config/chromium*' \
+    --exclude '.config/google-chrome/*' \
+    --exclude '*/node_modules/*' \
+    /run/media/bernd/bd821349-b2c3-46d4-b8c2-a430e4aaca04/borg::'{now:%Y-%m-%d_%H:%M}' \
     .
+
+borg prune \
+    --verbose \
+    --stats \
+    --list \
+    /run/media/bernd/bd821349-b2c3-46d4-b8c2-a430e4aaca04/borg \
+    --keep-daily=7 \
+    --keep-weekly=4 \
+    --keep-monthly=6

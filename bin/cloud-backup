@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 cd ~
 borg create \
     --verbose \
@@ -8,10 +8,20 @@ borg create \
     --show-rc \
     --compression lz4 \
     --exclude-caches \
-    cloud-backup::'{now:%Y-%m-%d}' \
+    --exclude '*/node_modules/*' \
+    cloud-backup::'{now:%Y-%m-%d_%H:%M}' \
     Documents \
     Desktop \
     Data \
     Backup \
     Workspace \
     Pictures
+
+borg prune \
+    --verbose \
+    --stats \
+    --list \
+    cloud-backup \
+    --keep-daily=7 \
+    --keep-weekly=4 \
+    --keep-monthly=6

@@ -13,5 +13,5 @@ XF86AudioMute
 super + Return
 	gnome-terminal
 
-super + Shift + Return
+super + shift + Return
 	rofi -show run
