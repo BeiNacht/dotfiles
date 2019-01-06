@@ -18,7 +18,7 @@ rofi.color-urgent: argb:00000000, #dc322f, #a6a6a6, #dc322f, #a6a6a6
 rofi.fullscreen: true
 rofi.padding: 400
 rofi.separator-style: solid
-rofi.font: Roboto Regular 13
+rofi.font: Liberation Sans 18
 
 xscreensaver.newLoginCommand: dm-tool switch-to-greeter
 

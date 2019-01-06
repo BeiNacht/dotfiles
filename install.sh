@@ -1,14 +1,6 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-echo "link compton"
-rm -f $HOME/.compton.conf
-ln -s $DIR/compton.conf $HOME/.compton.conf
-
-echo "link Xresources"
-rm -f $HOME/.Xresources
-ln -s $DIR/Xresources $HOME/.Xresources
-
 echo "link zsh"
 rm -f $HOME/.zshrc
 ln -s $DIR/zshrc $HOME/.zshrc
@@ -29,23 +21,31 @@ echo "link bin"
 rm -f $HOME/.bin
 ln -s $DIR/bin $HOME/.bin
 
-echo "link i3"
-rm -f $HOME/.config/i3/config
-ln -s $DIR/config-i3 $HOME/.config/i3/config
-
-echo "link dunst"
-rm -f $HOME/.config/dunst/dunstrc
-ln -s $DIR/dunstrc $HOME/.config/dunst/dunstrc
-
-echo "link sxhdkrc"
-rm -f $HOME/.config/sxhkd/sxhkdrc
-ln -s $DIR/sxhkdrc $HOME/.config/sxhkd/sxhkdrc
-
-echo "cp startup.desktop"
-sudo rm -f /usr/share/xsessions/startup.desktop
-sudo cp $DIR/startup.desktop /usr/share/xsessions/startup.desktop
-
 if [ $(hostname -s) = "thinkpad" ]; then
+    echo "link compton"
+    rm -f $HOME/.compton.conf
+    ln -s $DIR/compton.conf $HOME/.compton.conf
+
+    echo "link Xresources"
+    rm -f $HOME/.Xresources
+    ln -s $DIR/Xresources $HOME/.Xresources
+
+    echo "link i3"
+    rm -f $HOME/.config/i3/config
+    ln -s $DIR/config-i3 $HOME/.config/i3/config
+
+    echo "link dunst"
+    rm -f $HOME/.config/dunst/dunstrc
+    ln -s $DIR/dunstrc $HOME/.config/dunst/dunstrc
+
+    echo "link sxhdkrc"
+    rm -f $HOME/.config/sxhkd/sxhkdrc
+    ln -s $DIR/sxhkdrc $HOME/.config/sxhkd/sxhkdrc
+
+    echo "link bspwm"
+    rm -f $HOME/.config/bspwm/bspwmrc
+    ln -s $DIR/bspwmrc $HOME/.config/bspwm/bspwmrc
+
     echo "link 20-intel.conf"
     sudo rm -f /etc/X11/xorg.conf.d/20-intel.conf
     sudo ln -s $DIR/thinkpad/xorg.conf.d/20-intel.conf /etc/X11/xorg.conf.d/20-intel.conf
@@ -73,12 +73,6 @@ if [ $(hostname -s) = "thinkpad" ]; then
     echo "link 99-wlan"
     sudo rm -f /etc/NetworkManager/dispatcher.d/99-wlan
     sudo ln -s $DIR/thinkpad/networkmanager/99-wlan /etc/NetworkManager/dispatcher.d/99-wlan
-fi
-
-if [ $(hostname -s) = "pc" ]; then
-    echo "link 20-radeon.conf"
-    sudo rm -f /etc/X11/xorg.conf.d/20-radeon.conf
-    sudo ln -s $DIR/workstation/xorg.conf.d/20-radeon.conf /etc/X11/xorg.conf.d/20-radeon.conf
 fi
 
 #cat $DIR/thinkpad/mate-terminal-dump.dconf | dconf load /org/mate/terminal/

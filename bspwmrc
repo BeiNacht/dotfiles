@@ -1,0 +1,46 @@
+#! /bin/sh
+
+if [ -e "$BSPWM_STATE" ] ; then
+    notify-send bspwm state found
+    bspc wm -l "$BSPWM_STATE"
+    rm "$BSPWM_STATE"
+fi
+
+bspc config border_width            4
+bspc config window_gap              5
+bspc config top_padding             0
+bspc config left_padding            0
+bspc config right_padding           0
+bspc config bottom_padding          0
+bspc config split_ratio             0.50
+bspc config borderless_monocle      true
+bspc config single_monocle          true
+bspc config gapless_monocle         true
+bspc config focus_follows_pointer   true
+bspc config pointer_follows_monitor true
+bspc config pointer_follows_focus   false
+
+#bspc config adaptive_raise          true
+bspc config center_pseudo_tiled     true
+
+bspc config normal_border_color     "#333333"
+bspc config focused_border_color    "#666666"
+bspc config presel_feedback_color   "#000000"
+
+if xrandr -q | grep '^DP1 connected'; then
+    echo 'DP'
+    bspc monitor DP1 -d I II III IV V VI
+    bspc monitor eDP1 -d VII VIII IX X
+else if xrandr -q | grep '^HDMI1 connected'; then
+    echo 'HDMI'
+    bspc monitor HDMI1 -d I II III IV V VI
+    bspc monitor eDP1 -d VII VIII IX X
+else
+    echo 'none'
+    bspc monitor -d I II III IV V VI VII VIII IX X
+fi
+fi
+
+bspc rule -a KeeWeb desktop=^10 follow=on
+
+bspc wm --adopt-orphans

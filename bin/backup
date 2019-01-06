@@ -9,10 +9,22 @@ borg create \
     --compression lz4 \
     --exclude-caches \
     --exclude '.cache/*' \
-    --exclude 'cloud-backup/*' \
+    --exclude '.cloud-backup/*' \
     --exclude '.config/chromium*' \
+    --exclude '.config/Code/logs/*' \
     --exclude '.config/google-chrome/*' \
+    --exclude '.java/*' \
+    --exclude '.jd/*' \
+    --exclude '.local/share/gvfs-metadata/*.log' \
+    --exclude '.local/share/Trash/*' \
+    --exclude '.m2/*' \
+    --exclude '.mozilla/*' \
+    --exclude '.npm/_cacache/*' \
     --exclude '*/node_modules/*' \
+    --exclude 'Downloads/JDownloader/*' \
+    --exclude 'server_backup/*' \
+    --exclude 'server/*' \
+    --exclude 'VirtualBox VMs/*' \
     /run/media/bernd/bd821349-b2c3-46d4-b8c2-a430e4aaca04/borg::'{now:%Y-%m-%d_%H:%M}' \
     .
 

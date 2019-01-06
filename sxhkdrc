@@ -1,17 +1,86 @@
+#show time
 super + z
-	notify-send Time $(date '+%H:%M')
+    notify-send Time $(date '+%H:%M')
 
-super + s
-	notify-send Battery $(upower -i $(upower -e | grep 'BAT') | grep -E 'percentage' | cut -d ' ' -f15)
+#show Battery
+super + x
+    notify-send Battery $(upower -i $(upower -e | grep 'BAT') | grep -E 'percentage' | cut -d ' ' -f15)
 
 alt + Tab
-	rofi -show window
+    rofi -show window
 
+#Mute
 XF86AudioMute
-	pulseaudio-ctl mute
+    pulseaudio-ctl mute
+
+XF86AudioLowerVolume
+    pulseaudio-ctl down
+
+XF86AudioRaiseVolume
+    pulseaudio-ctl up
 
 super + Return
-	gnome-terminal
+    gnome-terminal
 
 super + shift + Return
-	rofi -show run
+    rofi -show drun
+
+super + Escape
+    pkill -USR1 -x sxhkd
+
+#cycle windows
+super {_,shift + }Tab
+    bspc node -f {next,prev}
+
+super + shift + c
+    bspc node -c
+
+super + a
+    bspc node @/ --flip vertical
+
+super + {s,f,k}
+    state={floating,fullscreen,pseudo_tiled}; \
+    bspc query -N -n "focused.$\{state\}" && state=tiled; \
+    bspc node -t "$state"
+
+super + ctrl + {Left,Down,Up,Right}
+    bspc node -p {west,south,north,east}
+
+super + alt + {Left,Right,Up,Down}
+    xdo move {-x -50,-x +50,-y -50,-y +50}
+
+super + {_,shift + }{Left,Down,Up,Right}
+    bspc node -{f,s} {west,south,north,east}
+
+super + m
+    bspc node -s biggest
+
+super + l
+    ~/.bin/lock
+
+super + b
+   bspc desktop --balance
+
+#super + y
+#    bspc node -n last.!automatic
+
+super + ctrl + space
+    bspc node -p cancel
+
+super + apostrophe
+    bspc node -s last
+
+super + ctrl + comma
+    bspc node @/ --rotate 90
+
+super + shift + comma
+    bspc node @/ --circulate forward
+
+super + shift + x
+    bspc wm -d > "$BSPWM_STATE" && bspc quit
+
+super + {q,w,e,r,t,y,u,i,o,p}
+    bspc desktop -f '^{1-9,10}'
+
+super + shift + {q,w,e,r,t,y,u,i,o,p}
+    bspc node -d '^{1-9,10}'

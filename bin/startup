@@ -4,14 +4,21 @@ export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
 export LC_MESSAGES="en_US.UTF-8"
+export _JAVA_AWT_WM_NONREPARENTING=1
 
-xrdb -merge .Xresources &
-nm-applet &
-blueman-applet &
-xscreensaver &
-compton &
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
 export SSH_AUTH_SOCK
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-i3
-#compiz --reload
+
+autorandr -c &
+xrdb -merge .Xresources &
+xsetroot -cursor_name left_ptr &
+compton &
+nitrogen --restore &
+sxhkd &
+xss-lock -- /home/bernd/.bin/lock &
+/usr/lib/policykit-1-pantheon/io.elementary.pantheon-agent-polkit &
+
+while :; do
+    bspwm
+    sleep 10
+done

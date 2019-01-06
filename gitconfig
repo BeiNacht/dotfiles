@@ -8,5 +8,7 @@
 [core]
 	autocrlf = false
 [branch]
-	autosetuprebase = always
+#	autosetuprebase = always
 	excludesfile = /home/bernd/.gitignore_global
+[credential]
+	helper = store

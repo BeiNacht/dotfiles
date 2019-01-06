@@ -9,7 +9,9 @@ borg create \
     --compression lz4 \
     --exclude-caches \
     --exclude '*/node_modules/*' \
-    cloud-backup::'{now:%Y-%m-%d_%H:%M}' \
+    --exclude '*/platforms/android/*' \
+    --exclude 'Workspace/**/plugins/*' \
+    .cloud-backup::'{now:%Y-%m-%d_%H:%M}' \
     Documents \
     Desktop \
     Data \
@@ -21,7 +23,7 @@ borg prune \
     --verbose \
     --stats \
     --list \
-    cloud-backup \
+    .cloud-backup \
     --keep-daily=7 \
     --keep-weekly=4 \
     --keep-monthly=6
